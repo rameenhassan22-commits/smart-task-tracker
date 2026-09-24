@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Task Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="#" class="logo">
+                Smart Task Tracker
+            </a>
+            <nav aria-label="Main-Navigation">
+                <a href="#tasks">Tasks</a>
+                <a href="#statistics">Statistics</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Manage Your Tasks</h1>
+                <p>
+                    Organize your work, track your progress, and stay productive.
+                </p>
+            </div>
+        </section>
+        <section class="task-input-section">
+            <div class="container">
+                <h2>Add a New Task</h2>
+                <form class="task-form">
+                    <div class="form-group">
+                        <label for="task-input">
+                            Task Description
+                        </label>
+                        <input type="text" name="task" id="task-input" placeholder="Enter Your Task.......">
+                    </div>
+                    <button type="submit">
+                        Add Task
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section id="statistics" class="statistics-section">
+            <div class="container">
+                <h2>Task Overview</h2>
+                <div class="stats-grid">
+                    <article class="stats-card">
+                        <h3>Total Tasks</h3>
+                        <p>0</p>
+                    </article>
+                    <article class="stats-card">
+                        <h3>Completed</h3>
+                        <p>0</p>
+                    </article>
+                    <article class="stats-card">
+                        <h3>Pending</h3>
+                        <p>0</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="tasks" class="tasks-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>My Tasks</h2>
+                    <div class="task-filters">
+                        <button type="button">
+                            All
+                        </button>
+                        <button type="button">
+                            Active
+                        </button>
+                        <button type="button">
+                            Completed
+                        </button>
+                    </div>
+                </div>
+                <div class="task-list">
+                    <article class="task-card">
+                        <div class="task-content">
+                            <input type="checkbox" id="task-1">
+                            <label for="task-1">
+                                Complete Internship Task
+                            </label>
+                        </div>
+                        <div class="task-actions">
+                            <button type="button">
+                                Edit
+                            </button>
+                            <button type="button">
+                                Delete
+                            </button>
+                        </div>
+
+                    </article>
+                    <article class="task-card completed">
+                        <div class="task-content">
+                            <input type="checkbox" id="task-2" checked>
+                            <label for="task-2">
+                                Study Javascript ES6+
+                            </label>
+                        </div>
+                        <div class="task-actions">
+                            <button type="button">
+                                Edit
+                            </button>
+                            <button type="button">
+                                Delete
+                            </button>
+                        </div>
+
+                    </article>
+                    <article class="task-card">
+                        <div class="task-content">
+                            <input type="checkbox" id="task-3">
+                            <label for="task-3">
+                                Practice Rest Api
+                            </label>
+                        </div>
+                        <div class="task-actions">
+
+                            <button type="button">
+                                Edit
+                            </button>
+
+                            <button type="button">
+                                Delete
+                            </button>
+
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                &copy; 2026 Smart Task Tracker
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
