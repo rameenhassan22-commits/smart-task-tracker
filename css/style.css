@@ -60,9 +60,15 @@ section h2{
     padding: 1.5rem;
     border: 1px solid #e5e7eb;
     border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
 }
 .form-group{
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 .form-group label{
     display: block;
@@ -82,14 +88,15 @@ section h2{
 }
 button{
     border: none;
-    padding: 0.7rem 1rem;
+    padding: 0.8rem 1rem;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 .task-form button{
     background-color: #2563eb;
     color: #ffffff;
+    margin-bottom: 1rem;
 }
 .task-form button:hover{
     background-color: #1d4ed8;
@@ -100,6 +107,7 @@ button{
     border: 1px solid #e5e7eb;
     border-radius: 10px;
     text-align: center;
+    flex: 1;
 }
 .stats-card h3{
     margin-bottom: 0.5rem;
@@ -125,6 +133,9 @@ button{
     border: 1px solid #e5e7eb ;
     border-radius: 8px;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .task-content label{
     font-weight: 500;
@@ -133,6 +144,8 @@ button{
 .task-actions{
     background-color: #f3f4f6 ;
     color: #374151;
+    display: flex;
+    gap: 0.5rem;
 }
 .task-actions button:hover{
     background-color: #e5e7eb;
@@ -149,4 +162,17 @@ button{
 }
 .site-footer p{
     font-size: 0.9rem;
+}
+.site-header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav{
+    display: flex;
+    gap: 1.5rem;
+}
+.stats-grid{
+    display: flex;
+    gap: 1rem;
 }
