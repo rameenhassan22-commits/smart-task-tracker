@@ -8,6 +8,12 @@ const pendingTasksElements = document.querySelector("#pending-tasks");
 
 const filterButton = document.querySelectorAll(".task-filters button");
 
+const quoteText = document.querySelector("#quote-text");
+const quoteAuthor = document.querySelector("#quote-author");
+const newQuoteButton = document.querySelector("#new-quote-button");
+
+const Quote_API_URL = "https://dummyjson.com/quotes/random";
+
 let tasks = [];
 
 let currentFilter = "all";
@@ -213,3 +219,32 @@ filterButton.forEach((button) => {
 });
 
 renderTasks();
+
+async function fetchProductivityQuote() {
+    quoteText.textContent = "Loading your productivity quote.....";
+    quoteAuthor.textContent = "";
+
+    try{
+        const response = await fetch(Quote_API_URL);
+
+        if(!response.ok){
+            throw new Error(`HTTP Error: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        quoteText.textContent = `"${data.quote}"`;
+        quoteAuthor.textContent = `— ${data.author}`;
+    } catch (error){
+        console.error("Error fetching productivity quote:", error);
+        quoteText.textContent =  "Unable to load a productivity quote right now.";
+        quoteAuthor.textContent = "";
+        
+    }
+}
+
+fetchProductivityQuote();
+
+newQuoteButton.addEventListener("click", () => {
+    fetchProductivityQuote();
+})

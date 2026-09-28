@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f4;
@@ -93,6 +95,7 @@ nav a:hover {
 
 .task-input-section,
 .statistics-section,
+.quote-section,
 .tasks-section {
     background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
     border: 1px solid #bcbec2;
@@ -105,11 +108,61 @@ nav a:hover {
 
 .task-input-section .container,
 .statistics-section .container,
+.quote-section .container,
 .tasks-section .container {
     width: 100%;
     max-width: 100%;
     margin: 0;
     padding: 0;
+}
+.quote-card{
+    background-color: #ffffff;
+    border: 1px solid #bcbec2;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.1);
+}
+.quote-icon{
+    font-size: 2rem;
+    color: #1e2a78;
+    margin-bottom: 0.8rem;
+}
+.quote-content h2{
+    color: #1e2a78;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+#quote-text{
+    color: #374151;
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 0.7rem;
+}
+#quote-author{
+    color: #1e2a78;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+#new-quote-button{
+    background: linear-gradient(135deg, #1e2a78, #16205c);
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 0.9rem 1.5rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 6px 18px rgba(30, 42, 120, 0.3);
+    transition: all 0.25s ease;
+}
+#new-quote-button:hover {
+    background: linear-gradient(135deg, #16205c, #0f1745);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(30, 42, 120, 0.4);
 }
 
 section h2 {
@@ -341,6 +394,7 @@ button {
     font-size: 0.9rem;
 }
 
+
 @media (min-width: 768px) {
     .container {
         width: 90%;
@@ -375,6 +429,18 @@ button {
 
     .hero p {
         font-size: 1rem;
+    }
+
+    .quote-section{
+        padding: 2rem;
+    }
+    .quote-card{
+        padding: 2rem;
+    }
+    #quote-text{
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto 0.7rem;
     }
 
     .task-form {
@@ -421,6 +487,7 @@ button {
     .task-filters button {
         flex: initial;
     }
+    
 }
 
 @media (min-width: 1024px) {
@@ -439,6 +506,7 @@ button {
 
     .task-input-section,
     .statistics-section,
+    .quote-section,
     .tasks-section {
         padding: 2rem;
     }
