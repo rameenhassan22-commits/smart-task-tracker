@@ -214,10 +214,16 @@ taskList.addEventListener("click", (event) => {
 filterButton.forEach((button) => {
     button.addEventListener("click", () => {
         currentFilter = button.dataset.filter;
+
+        filterButton.forEach((filter) => {
+            filter.classList.remove("active");
+        });
+        button.classList.add("active");
         renderTasks();
     });
 });
 
+filterButton[0].classList.add("active");
 renderTasks();
 
 async function fetchProductivityQuote() {

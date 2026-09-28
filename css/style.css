@@ -308,6 +308,11 @@ button {
     color: #1e2a78;
 }
 
+.task-filters button.active{
+    background: #1e2a78;
+    color: #ffffff;
+    border-color: #1e2a78;
+}
 .task-card {
     background-color: #ffffff;
     padding: 1rem 1.25rem;
