@@ -378,13 +378,13 @@ function renderWeather(data, locationName) {
 }
 
 function renderWeatherError(message) {
-    weatherLocationEl.innerHTML = `<i class="fas fa-location-dot"></i> Location unavailable`;
+    weatherLocationEl.textContent = "Location unavailable";
     weatherContentEl.innerHTML = `<p class="weather-error">${message}</p>`;
 }
 
 // Main orchestrator
 async function loadWeather() {
-    weatherLocationEl.innerHTML = `<i class="fas fa-location-dot"></i> Detecting your location...`;
+    weatherLocationEl.textContent = "Detecting your location...";
     weatherContentEl.innerHTML = `<p class="weather-loading">Loading weather data...</p>`;
 
     try {
