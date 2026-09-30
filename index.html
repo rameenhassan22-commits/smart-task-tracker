@@ -29,6 +29,7 @@
                 <a href="#tasks">Tasks</a>
                 <a href="#statistics">Statistics</a>
                 <a href="#quote">Quote</a>
+                <a href="#weather">Weather</a>
             </nav>
         </div>
     </header>
@@ -117,6 +118,26 @@
                         <i class="fas fa-rotate"></i>
                         New Quote
                     </button>
+                </div>
+            </div>
+        </section>
+        <section id="weather" class="weather-section">
+            <div class="container">
+                <h2><i class="fas fa-cloud-sun"></i> Weather</h2>
+                <div class="weather-card">
+                    <div class="weather-header">
+                        <div class="weather-location">
+                            <i class="fas fa-location-dot"></i>
+                            <span id="weather-location">Detecting your location...</span>
+                        </div>
+                        <button id="refresh-weather-button" type="button" title="Refresh weather">
+                            <i class="fas fa-rotate"></i>
+                            Refresh
+                        </button>
+                    </div>
+                    <div id="weather-content" class="weather-content">
+                        <p class="weather-loading">Loading weather data...</p>
+                    </div>
                 </div>
             </div>
         </section>
